@@ -1,0 +1,32 @@
+<% include ../partials/headexta %>
+<% include ../partials/navMenu %>
+
+<body>    
+    <div class="grid-container">
+    <div class="title">
+        <h2>ajax test from /api</h2>
+    </div>
+        <div class="box">
+            <h3 class="t">Send us a message</h3>
+            <form action="/api" method="POST" name="commentForm">
+                <div id="error"></div>
+                <label for="name"><strong>Name</strong></label>
+                <input type="text" name="name" placeholder="enter a name" id="name" required><br>
+                <label for="title"><strong>Title</strong></label>
+                <input type="text" name="title" placeholder="title" id="title" required><br>
+                <label for="message"><strong>Message</strong></label><br>
+                <textarea name="body" id="body" cols="20" rows="4" placeholder="enter a message" required></textarea><br>
+                <label for="submitComment"><stong>Submit Comment</stong></label>
+                <button id="button">Submit</button>                
+            </form>
+        </div>
+        <div class="fetch-data">        
+            <ul class="test" id="test"></ul>
+        </div>
+    </div>
+
+
+<% include ../partials/footer %>
+<% include ../partials/domscripts %>   
+<% include ../partials/scripts %>
+<% include ../partials/closehtml %>
